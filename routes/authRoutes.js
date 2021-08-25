@@ -16,8 +16,8 @@ router.get('/auth/google/callback',
 );
 
 router.get('/api/logout', (req, res) => {
-    req.logOut();
     res.send(req.user);
+    req.logOut();
 })
 
 router.get('/api/current_user', (req, res) => {
